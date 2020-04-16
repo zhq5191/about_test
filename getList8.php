@@ -65,9 +65,32 @@ $data_list = array(
     array('id'=>10,'name'=>'巩俐')
 );
 
+//根据字段id对数组$data进行降序排列
+$ids = array_column($data_list,'id');
+array_multisort($ids,SORT_DESC,$data_list);
+
 
 // 修复没有页码数的缺陷
 $count = count($data_list);   // 获取数据总长度
+
+// 判断用户查询数据条数是否超过了总数
+$search_num = $page * $size;
+
+if($search_num > $count){
+
+    $data = array(
+
+        'code' => 602,
+        'msg' => '没有查到数据',
+        'result' => array()
+    );
+
+    $rst = json_encode($data,JSON_UNESCAPED_UNICODE);
+
+    echo $rst;
+
+    die();
+}
 
 $total_num = ceil($count / floatval($size));
 

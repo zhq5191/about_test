@@ -65,6 +65,10 @@ $data_list = array(
     array('id'=>10,'name'=>'巩俐')
 );
 
+//根据字段id对数组$data进行降序排列
+$ids = array_column($data_list,'id');
+array_multisort($ids,SORT_DESC,$data_list);
+
 
 // 修复没有页码数的缺陷
 $count = count($data_list);   // 获取数据总长度

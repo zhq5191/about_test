@@ -4,7 +4,7 @@
 header('Content-Type:application/json; charset=utf-8');
 
 
-// 获取参数index
+// 获取参数
 $page = $_GET['page'];
 $size = $_GET['size'];
 

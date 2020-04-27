@@ -40,7 +40,7 @@ if($flag){
     // 组织的数据
     $data = array(
         'code' => 200,
-        'msg' => '请求成功',
+        'msg' => '登录成功',
         'result' => array(
             'name' => $name,
             'nick' => $nick_name,

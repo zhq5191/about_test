@@ -49,4 +49,3 @@ $rst = json_encode($data,JSON_UNESCAPED_UNICODE);
 
 // 打印结果
 echo $rst;
-

@@ -12,6 +12,8 @@
 
     fclose($handle);
 
+    sleep(0.5);
+
     $handle = fopen($filename, "w");//读取二进制文件时，需要将第二个参数设置成'rb'
 
     $contents = $contents -1;
@@ -38,4 +40,5 @@
 
     // 打印结果
     echo $rst;
+
 
